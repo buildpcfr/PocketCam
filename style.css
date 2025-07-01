@@ -9,17 +9,17 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-header {
+.site-header {
   background-color: #333;
-  color: white;
+  color: #fff;
+  text-align: center;
   padding: 1rem 0;
 }
 
@@ -29,33 +29,56 @@ header {
   padding: 2rem;
 }
 
+/* Hero section */
 .hero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-}
-
-.hero-text {
-  flex: 1 1 300px;
   text-align: left;
 }
 
-img.product {
+.hero-content {
+  flex: 1 1 300px;
+}
+
+.hero-image {
   width: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.benefits ul {
+.cta-button {
+  background-image: var(--cta-gradient);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* About section */
+.about-product {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.benefits {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin: 2rem 0;
 }
 
 .benefits li {
@@ -71,17 +94,35 @@ img.product {
   margin-bottom: 0.5rem;
 }
 
-.testimonials blockquote {
+/* Testimonials */
+.testimonials {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
   margin: 1rem auto;
-  max-width: 600px;
-  font-style: italic;
+  max-width: 400px;
+}
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+}
+
+/* Gallery */
+.lifestyle-gallery {
+  padding: 2rem 0;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .gallery-grid img {
@@ -89,21 +130,31 @@ img.product {
   border-radius: 4px;
 }
 
-button.buy-btn {
-  background-image: var(--cta-gradient);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }
 
-button.buy-btn:hover {
-  transform: scale(1.05);
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Fade animation */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
