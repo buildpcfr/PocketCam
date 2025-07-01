@@ -1,28 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PocketCam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>PocketCam</h1>
+  <header class="site-header">
+    <h1 class="site-title">PocketCam</h1>
     <button id="dark-toggle">Dark Mode</button>
   </header>
   <main>
-    <h2>The compact camera for every adventure</h2>
-    <!-- Replace the src URL with your own product image -->
-    <img class="product" src="https://images.unsplash.com/photo-1519183071298-a2962eadc707?w=600" alt="PocketCam" />
-    <p>Capture life's moments with PocketCam, your lightweight travel companion.</p>
-    <button class="buy-btn">Buy Now</button>
-    <!-- Gallery images use Unsplash placeholders. Replace the src URLs with your photos -->
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=200" alt="City" />
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200" alt="Nature" />
-      <img src="https://images.unsplash.com/photo-1498575207490-27e2e07fc3d0?w=200" alt="Mountains" />
-    </div>
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="hero-heading">Capturez chaque instant</h2>
+        <p class="hero-subheading">La caméra compacte pour toutes vos aventures</p>
+        <button class="cta-button">Acheter maintenant</button>
+      </div>
+      <!-- Replace the src URL with your own product image -->
+      <img class="hero-image" src="https://images.unsplash.com/photo-1519183071298-a2962eadc707?w=600" alt="PocketCam" />
+    </section>
+
+    <section class="about-product">
+      <h2>À propos du produit</h2>
+      <ul class="benefits">
+        <li><span class="icon">📸</span>Résolution haute définition</li>
+        <li><span class="icon">⚡</span>Autonomie longue durée</li>
+        <li><span class="icon">🌧️</span>Résistant aux intempéries</li>
+      </ul>
+    </section>
+
+    <section class="testimonials">
+      <h2>Avis des clients</h2>
+      <article class="testimonial">
+        <p class="review">"Super qualité d'image et format très pratique."</p>
+        <div class="stars">★★★★★</div>
+        <p class="author">— Julie</p>
+      </article>
+      <article class="testimonial">
+        <p class="review">"Idéale pour mes voyages, je recommande !"</p>
+        <div class="stars">★★★★☆</div>
+        <p class="author">— Marc</p>
+      </article>
+    </section>
+
+    <section class="lifestyle-gallery">
+      <h2>Galerie</h2>
+      <!-- Gallery images use Unsplash placeholders. Replace the src URLs with your photos -->
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=300" alt="Ville" />
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300" alt="Nature" />
+        <img src="https://images.unsplash.com/photo-1498575207490-27e2e07fc3d0?w=300" alt="Montagnes" />
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300" alt="Plage" />
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="#" class="footer-link">Mentions légales</a>
+      <a href="#" class="footer-link">Politique de confidentialité</a>
+      <a href="#" class="footer-link">Contact</a>
+    </nav>
+  </footer>
   <script>
     const toggle = document.getElementById('dark-toggle');
     toggle.addEventListener('click', () => {

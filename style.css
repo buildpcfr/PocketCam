@@ -1,11 +1,11 @@
 /* Images use Unsplash placeholders by default. Replace the URLs in index.html
    with your own images if desired. */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
   background-color: #f7f7f7;
+  color: #333;
 }
 
 body.dark {
@@ -13,7 +13,7 @@ body.dark {
   color: #f7f7f7;
 }
 
-body.dark header {
+body.dark .site-header {
   background-color: #000;
 }
 
@@ -30,9 +30,10 @@ body.dark button#dark-toggle {
   color: #fff;
 }
 
-header {
+.site-header {
   background-color: #333;
-  color: white;
+  color: #fff;
+  text-align: center;
   padding: 1rem 0;
 }
 
@@ -40,30 +41,25 @@ main {
   padding: 2rem;
 }
 
-img.product {
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero-image {
   width: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
 }
 
-.gallery {
-  margin-top: 2rem;
-}
-
-.gallery img {
-  width: 200px;
-  margin: 0.5rem;
-  border-radius: 4px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-button.buy-btn {
+.cta-button {
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -72,6 +68,96 @@ button.buy-btn {
   margin-top: 1rem;
 }
 
-button.buy-btn:hover {
+.cta-button:hover {
   background-color: #0056b3;
+}
+
+/* About section */
+.about-product {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefits li {
+  margin: 1rem;
+}
+
+.benefits .icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
+}
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+}
+
+/* Gallery */
+.lifestyle-gallery {
+  padding: 2rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
