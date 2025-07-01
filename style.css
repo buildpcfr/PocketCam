@@ -1,9 +1,20 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #252525;
+  --cta-gradient: linear-gradient(45deg, #007bff, #00bfff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
@@ -12,37 +23,96 @@ header {
   padding: 1rem 0;
 }
 
-main {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  text-align: left;
 }
 
 img.product {
   width: 300px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.gallery {
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefits li {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.benefits .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials blockquote {
+  margin: 1rem auto;
+  max-width: 600px;
+  font-style: italic;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.gallery img {
-  width: 200px;
-  margin: 0.5rem;
+.gallery-grid img {
+  width: 100%;
   border-radius: 4px;
 }
 
 button.buy-btn {
-  background-color: #007bff;
+  background-image: var(--cta-gradient);
   color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: transform 0.3s ease;
 }
 
 button.buy-btn:hover {
-  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
