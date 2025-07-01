@@ -8,17 +8,26 @@
 <body>
   <header>
     <h1>PocketCam</h1>
+    <button id="dark-toggle">Dark Mode</button>
   </header>
   <main>
     <h2>The compact camera for every adventure</h2>
+    <!-- Replace the src URL with your own product image -->
     <img class="product" src="https://images.unsplash.com/photo-1519183071298-a2962eadc707?w=600" alt="PocketCam" />
     <p>Capture life's moments with PocketCam, your lightweight travel companion.</p>
     <button class="buy-btn">Buy Now</button>
+    <!-- Gallery images use Unsplash placeholders. Replace the src URLs with your photos -->
     <div class="gallery">
       <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=200" alt="City" />
       <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200" alt="Nature" />
       <img src="https://images.unsplash.com/photo-1498575207490-27e2e07fc3d0?w=200" alt="Mountains" />
     </div>
   </main>
+  <script>
+    const toggle = document.getElementById('dark-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
